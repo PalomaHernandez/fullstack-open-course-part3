@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+app.use(express.static('dist'))
+
 var morgan = require('morgan')
 morgan.token('body', function (req, res) { return JSON.stringify(req.body) })
 
